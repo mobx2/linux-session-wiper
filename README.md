@@ -3,7 +3,7 @@
 ![Secure Exit Screenshot](./screen.png)
 
 A secure, user-space session cleanup utility designed for Debian/Ubuntu development environments. This script helps you quickly and safely close your workspace for privacy and maintenance reasons.
-
+ 
 When executed, the `session-cleanup.sh` script will:
 1. Clear the terminal screen and display a stylized aesthetic exit message.
 2. Clear the active bash/zsh history for your user to maintain session privacy.

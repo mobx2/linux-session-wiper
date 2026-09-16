@@ -4,7 +4,7 @@
   "description": "Interactive Linux terminal session wiper and cleanup tool.",
   "main": "session-cleanup.sh",
   "bin": {
-    "wiper": "./session-cleanup.sh"
+    "wiper": "session-cleanup.sh"
   },
   "scripts": {
     "test": "bash -n session-cleanup.sh"

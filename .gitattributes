@@ -1,0 +1,20 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Ensure shell scripts always use LF line endings
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# Configuration and markdown files
+*.md text
+*.yml text
+*.yaml text
+*.json text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary

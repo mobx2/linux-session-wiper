@@ -1,0 +1,13 @@
+[Unit]
+Description=Linux Session Wiper on User Logout
+Documentation=https://github.com/mobx2/linux-session-wiper
+DefaultDependencies=no
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/usr/local/bin/wiper --headless
+
+[Install]
+WantedBy=default.target

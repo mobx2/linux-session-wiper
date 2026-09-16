@@ -65,7 +65,7 @@ source ~/.bashrc
 # or `source ~/.zshrc` if using zsh
 ```
 
-## Usage
+## Usage 
 
 Simply type `wiper` (or `secure-exit` if using an alias) in your terminal to trigger the cleanup and safely close your session window.
 

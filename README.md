@@ -1,35 +1,63 @@
-# Secure Session Cleanup Utility
+# Linux Session Wiper
+
+[![npm version](https://img.shields.io/npm/v/linux-session-wiper.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/linux-session-wiper)
+[![npm downloads](https://img.shields.io/npm/dm/linux-session-wiper.svg?style=flat-square&color=blue)](https://www.npmjs.com/package/linux-session-wiper)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/mobx2/linux-session-wiper/lint.yml?branch=main&style=flat-square&label=CI)](https://github.com/mobx2/linux-session-wiper/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](./LICENSE)
+[![Platform: Linux](https://img.shields.io/badge/Platform-Linux-lightgrey.svg?style=flat-square)](https://www.kernel.org)
 
 ![Secure Exit Screenshot](./screen.png)
 
-A secure, user-space session cleanup utility designed for Debian/Ubuntu development environments. This script helps you quickly and safely close your workspace for privacy and maintenance reasons.
- 
-When executed, the `session-cleanup.sh` script will:
-1. Clear the terminal screen and display a stylized aesthetic exit message.
-2. Clear the active bash/zsh history for your user to maintain session privacy.
-3. Gracefully terminate any of your active SSH connections or background network jobs.
-4. Clean up temporary cache folders (such as `~/.cache/thumbnails` and your specific files in `/tmp`) used in the current session.
-5. Safely close the terminal window.
+An advanced, interactive cyberpunk-styled terminal session and privacy cleaner for Linux. This utility allows developers and system administrators to quickly purge histories, browser cookies, developer caches, and temporary session files.
 
-The script operates in user space during cleanup operations, with optional system-wide binary placement for convenience.
+When executed, `session-cleanup.sh` provides an interactive menu with modular cleaning targets:
+1. **Shell History Wipe**: Securely shreds `~/.bash_history` and `~/.zsh_history` and resets in-memory history.
+2. **Browser Data Wipe**: Gracefully kills active browser instances (Chrome, Firefox, Brave) and purges caches, cookies, session storage, and SQLite history while preserving bookmarks and extensions.
+3. **Developer Cache Wipe**: Cleans npm cache, project Next.js build caches (`.next/cache`), and Cursor / Windsurf editor caches and logs.
+4. **Session & /tmp Wipe**: Terminates user SSH sessions, forcefully purges thumbnail cache (`~/.cache/thumbnails`), and cleans user-owned `/tmp` files.
+5. **Nuke Everything**: Complete sequential execution of all modules with confirmation before closing the terminal window.
 
 ## Installation
 
-### Quick Install (System-Wide)
+### 1. Install via npm (Recommended)
 
-To install the tool globally so it can be executed system-wide from any directory by simply typing `wiper`, run this command:
+Install globally using npm:
 
 ```bash
-sudo curl -sL "https://raw.githubusercontent.com/mobx2/linux-session-wiper/refs/heads/main/session-cleanup.sh" -o /usr/local/bin/wiper && sudo chmod +x /usr/local/bin/wiper
+npm install -g linux-session-wiper
 ```
 
-This command downloads the script directly into `/usr/local/bin/wiper` and grants executable permissions. You can then run the utility anytime with:
+Once installed, run it anytime from any directory:
 
 ```bash
 wiper
 ```
 
-### Manual Installation
+Or run instantly without installing via `npx`:
+
+```bash
+npx linux-session-wiper
+```
+
+---
+
+### 2. Quick Install via Curl (System-Wide)
+
+To install directly to `/usr/local/bin/wiper` without Node.js:
+
+```bash
+sudo curl -sL "https://raw.githubusercontent.com/mobx2/linux-session-wiper/refs/heads/main/session-cleanup.sh" -o /usr/local/bin/wiper && sudo chmod +x /usr/local/bin/wiper
+```
+
+Then run:
+
+```bash
+wiper
+```
+
+---
+
+### 3. Manual Installation (from Source)
 
 1. Clone this repository:
    ```bash
@@ -56,8 +84,6 @@ Add the following line to your `~/.bashrc` or `~/.zshrc` configuration file:
 alias secure-exit='history -c && /absolute/path/to/session-cleanup.sh'
 ```
 
-*Note: Replace `/absolute/path/to/session-cleanup.sh` with the actual absolute path to where you saved the script.*
-
 After adding the alias, reload your shell configuration:
 
 ```bash
@@ -65,8 +91,16 @@ source ~/.bashrc
 # or `source ~/.zshrc` if using zsh
 ```
 
-## Usage 
+## Documentation
 
-Simply type `wiper` (or `secure-exit` if using an alias) in your terminal to trigger the cleanup and safely close your session window.
+- [Architecture & Design](docs/ARCHITECTURE.md)
+- [Frequently Asked Questions (FAQ)](docs/FAQ.md)
+- [Troubleshooting Guide](docs/TROUBLESHOOTING.md)
+- [Automated Logout with systemd](systemd/README.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+- [Security Policy](SECURITY.md)
 
-<!-- Badge trigger for correct user -->
+## License
+
+This project is licensed under the [MIT License](LICENSE).

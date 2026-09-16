@@ -40,7 +40,7 @@ case "$confirm" in
         echo -e "\n${GREEN}[+] Linux Session Wiper has been successfully uninstalled.${NC}"
         ;;
     *)
-        echo -e "\n${CYAN}[*] Uninstall cancelled.${NC}"
+        echo -e "\n${RED}[x] Uninstall cancelled.${NC}"
         exit 0
         ;;
 esac

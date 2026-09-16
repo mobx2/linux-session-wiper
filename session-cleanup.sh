@@ -314,7 +314,6 @@ main() {
                 echo -e "\n${CYAN}[*] Exiting session wiper...${NC}"
                 sleep 0.5
                 exit_routine
-                break
                 ;;
             *)
                 echo -e "\n${RED}[x] Invalid selection. Please choose a number between 1 and 6.${NC}"

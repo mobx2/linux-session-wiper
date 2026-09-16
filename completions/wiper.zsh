@@ -1,4 +1,5 @@
 #compdef wiper session-cleanup.sh
+# shellcheck shell=bash
 
 _wiper() {
     local -a options
@@ -13,7 +14,7 @@ _wiper() {
         '--quiet[Run quietly without interactive prompts]'
     )
 
-    _arguments -s $options
+    _arguments -s "${options[@]}"
 }
 
 _wiper "$@"

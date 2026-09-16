@@ -40,3 +40,4 @@ jobs:
           severity: warning
           ignore_paths: >-
             node_modules
+            completions/wiper.zsh

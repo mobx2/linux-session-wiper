@@ -1,7 +1,6 @@
 # Linux Session Wiper
 
 [![npm version](https://img.shields.io/npm/v/linux-session-wiper.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/linux-session-wiper)
-[![npm downloads](https://img.shields.io/npm/dm/linux-session-wiper.svg?style=flat-square&color=blue)](https://www.npmjs.com/package/linux-session-wiper)
 [![CI Status](https://img.shields.io/github/actions/workflow/status/mobx2/linux-session-wiper/lint.yml?branch=main&style=flat-square&label=CI)](https://github.com/mobx2/linux-session-wiper/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](./LICENSE)
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux-lightgrey.svg?style=flat-square)](https://www.kernel.org)

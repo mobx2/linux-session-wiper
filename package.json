@@ -1,0 +1,32 @@
+{
+  "name": "linux-session-wiper",
+  "version": "1.0.0",
+  "description": "Interactive Linux terminal session wiper and cleanup tool.",
+  "main": "session-cleanup.sh",
+  "bin": {
+    "wiper": "./session-cleanup.sh"
+  },
+  "scripts": {
+    "test": "bash -n session-cleanup.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobx2/linux-session-wiper.git"
+  },
+  "keywords": [
+    "linux",
+    "terminal",
+    "session",
+    "cleanup",
+    "wiper",
+    "privacy",
+    "bash",
+    "cli"
+  ],
+  "author": "Ibraheem Shaheen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobx2/linux-session-wiper/issues"
+  },
+  "homepage": "https://github.com/mobx2/linux-session-wiper#readme"
+}

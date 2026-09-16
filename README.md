@@ -68,3 +68,5 @@ source ~/.bashrc
 ## Usage
 
 Simply type `wiper` (or `secure-exit` if using an alias) in your terminal to trigger the cleanup and safely close your session window.
+
+<!-- Badge trigger for correct user -->

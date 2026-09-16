@@ -11,20 +11,43 @@ When executed, the `session-cleanup.sh` script will:
 4. Clean up temporary cache folders (such as `~/.cache/thumbnails` and your specific files in `/tmp`) used in the current session.
 5. Safely close the terminal window.
 
-The script is non-destructive and operates strictly within the current user space (no `sudo` or `root` commands are required or used).
+The script operates in user space during cleanup operations, with optional system-wide binary placement for convenience.
 
 ## Installation
 
-1. Clone or download this repository.
-2. Make the script executable:
+### Quick Install (System-Wide)
 
+To install the tool globally so it can be executed system-wide from any directory by simply typing `wiper`, run this command:
+
+```bash
+sudo curl -sL "https://raw.githubusercontent.com/mobx2/linux-session-wiper/refs/heads/main/session-cleanup.sh" -o /usr/local/bin/wiper && sudo chmod +x /usr/local/bin/wiper
+```
+
+This command downloads the script directly into `/usr/local/bin/wiper` and grants executable permissions. You can then run the utility anytime with:
+
+```bash
+wiper
+```
+
+### Manual Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/mobx2/linux-session-wiper.git
+   cd linux-session-wiper
+   ```
+2. Make the script executable:
    ```bash
    chmod +x session-cleanup.sh
+   ```
+3. Execute directly:
+   ```bash
+   ./session-cleanup.sh
    ```
 
 ## Creating an Alias (`secure-exit`)
 
-For the best experience, you should map this script to a global alias so you can quickly trigger it from any directory. 
+For quick access without system-wide installation, you can map the script to a shell alias.
 
 Add the following line to your `~/.bashrc` or `~/.zshrc` configuration file:
 
@@ -44,4 +67,4 @@ source ~/.bashrc
 
 ## Usage
 
-Simply type `secure-exit` in your terminal to trigger the cleanup and safely close your session window.
+Simply type `wiper` (or `secure-exit` if using an alias) in your terminal to trigger the cleanup and safely close your session window.

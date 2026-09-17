@@ -7,7 +7,7 @@
 
 ![Secure Exit Screenshot](./screen.png)
 
-An advanced, interactive cyberpunk-styled terminal session and privacy cleaner for Linux. This utility allows developers and system administrators to quickly purge histories, browser cookies, developer caches, and temporary session files.
+An advanced, interactive terminal session and privacy cleaner for Linux. This utility allows developers and system administrators to quickly purge histories, browser cookies, developer caches, and temporary session files.
 
 When executed, `session-cleanup.sh` provides an interactive menu with modular cleaning targets:
 1. **Shell History Wipe**: Securely shreds `~/.bash_history` and `~/.zsh_history` and resets in-memory history.
